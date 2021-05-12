@@ -1,0 +1,78 @@
+@mixin flexCenter($direction, $justify) {
+	display: flex;
+	justify-content: $justify;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: black;
+	height: 100vh;
+	@include flexCenter(row, center);
+}
+
+.game {
+	height: 100vh;
+	width: 100vw;
+	max-height: 600px;
+	max-width: 800px;
+	background-color: orange;
+	border-radius: 15px;
+	@include flexCenter(column, center);
+
+	&__title {
+		height: 20%;
+		@include flexCenter(row, center);
+	}
+
+	&__playground {
+		height: 70%;
+		width: 90%;
+		@include flexCenter(column, space-between);
+
+		&__start {
+			padding: 10px;
+			justify-self: center;
+		}
+
+		&__questions {
+			width: 100%;
+			@include flexCenter(column, space-between);
+			display: none;
+
+			&__scores {
+				width: 100%;
+				@include flexCenter(row, space-between);
+				text-align: center;
+
+				&__previous-score,
+				&__timer,
+				&__score {
+					width: 20%;
+				}
+			}
+
+			&__display {
+				@include flexCenter(column, center);
+				
+				&__emojis {
+					font-size: 4rem;
+				}
+
+				&__answer {
+					font-size: 4rem;
+				}
+			}
+
+			&__buttons button {
+				padding: 10px;
+				margin: 10px;
+			}
+		}
+	}
+}

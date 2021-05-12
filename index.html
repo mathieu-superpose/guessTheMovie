@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Guess the Movie</title>
+	<meta name="description" content="Simple Game: Guess the Movie">
+	<meta name="keywords" content="JavaScript Game Vocal Movie Emojis">
+	<meta name="author" content="Mathieu Joly">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	<div class="game">
+		<div class="game__title">
+			<h1>GUESS THE MOVIE</h1>
+		</div>
+		<div class="game__playground">
+
+			<button class="game__playground__start" onclick="startGame()">START GAME</button>
+
+			<div class="game__playground__questions">
+
+				<div class="game__playground__questions__scores">
+					<p class="game__playground__questions__scores__previous-score">previous score:<br>100</p>
+					<p class="game__playground__questions__scores__timer">Time left:<br>1:48</p>
+					<p class="game__playground__questions__scores__score">score:<br>17</p>
+				</div>
+
+				<div class="game__playground__questions__display">
+					<p class="game__playground__questions__display__emojis"></p>
+					<p class="game__playground__questions__display__answer"></p>
+				</div>
+
+				<div class="game__playground__questions__buttons">
+					<button class="game__playground__questions__buttons__hint">HINT</button>
+					<button class="game__playground__questions__buttons__next">NEXT</button>
+				<div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>
